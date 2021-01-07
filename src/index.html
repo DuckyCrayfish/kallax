@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Nick Iacullo">
+    <title>Kallax Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100 overflow-auto">
+
+        <div class="col-sm-4 col-xl-3 p-0 bg-light sidebar px-4 h-100 overflow-auto" >
+          <h1 class="navbar-brand mr-0 text-wrap">Kallax Calculator</h1>
+
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="rowSelect">Rows</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label for="rowSelect" class="input-group-text" aria-hidden="true">&#x2195;</label>
+                  </div>
+                  <select class="custom-select d-block" id="rowSelect" required>
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="columnSelect">Columns</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label for="columnSelect" class="input-group-text" aria-hidden="true">&#x2194;</label>
+                  </div>
+                  <select class="custom-select d-block" id="columnSelect" required>
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label for="color">Color</label>
+              <div class="input-group">
+                <select class="custom-select d-block w-100" id="color" required>
+                  <option>White</option>
+                  <option>Black</option>
+                  <option>Walnut</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <h4 class="mb-3">Dimensions</h4>
+            <div class="d-flex mb-2 align-items-baseline justify-content-between"><div class="dimension-label">Width</div><div class="dimension" id="widthLabel"></div></div>
+            <div class="d-flex mb-2 align-items-baseline justify-content-between"><div class="dimension-label">Height</div><div class="dimension" id="heightLabel"></div></div>
+          </form>
+        </div>
+
+        <!-- Main column -->
+        <div id="canvasWrapper" class="col h-100 p-0 overflow-hidden">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 px-4 viewport-header">
+            <div class="h2"></div>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                Tools
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
